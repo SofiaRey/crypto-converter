@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./imgs/logo.svg" />
+    <title>Converze</title>
+  </head>
+
+  <body class="text-white">
+    <nav
+      class="sticky top-0 z-30 h-[72px] bg-[#232B6B] bg-opacity-10 backdrop-blur backdrop-filter py-4 border-solid border-b border-[#4D5593]/[.8]"
+    >
+      <img class="h-full mx-auto" src="./imgs/logo.svg" />
+    </nav>
+    <section class="flex flex-col w-full items-center mb-12">
+      <h1 class="text-2xl mt-12 mb-8">Convertidor de Criptomonedas</h1>
+
+      <!-- ------------ Converter ------------ -->
+      <form
+        id="formConvert"
+        class="bg-[#4D5593]/[.3] rounded py-6 px-8 w-10/12 md:w-8/12 backdrop-blur backdrop-filter border-[#4D5593] border"
+      >
+        <!-- Title -->
+        <h2 class="mb-4 text-[#38D4B8] tracking-widest">CONVERTIDOR</h2>
+
+        <!-- Currencies -->
+        <div class="relative w-full">
+          <input
+            type="number"
+            id="currencyAmount"
+            class="h-16 text-sm font-medium bg-transparent rounded-t border-white border border-b-[#888DB5] w-full p-4"
+          />
+          <select
+            id="currencySelect"
+            class="absolute right-4 py-auto top-4 w-24 bg-[#232B6B] px-4 py-1 rounded-full"
+          ></select>
+          <img class="absolute right-7 top-7" src="./imgs/chevron-down.svg" />
+        </div>
+
+        <!-- Cryptos -->
+        <div class="relative w-full">
+          <input
+            type="number"
+            id="cryptoAmount"
+            class="h-16 text-sm font-medium bg-transparent rounded-b border-white border border-t-transparent w-full p-4"
+          />
+          <select
+            id="cryptoSelect"
+            class="absolute right-4 py-auto top-4 w-24 bg-[#232B6B] px-4 py-1 rounded-full border-none"
+          ></select>
+          <img class="absolute right-7 top-7" src="./imgs/chevron-down.svg" />
+        </div>
+
+        <!-- Estimated Price -->
+        <h3 class="mt-4 text-sm text-[#888DB5]">
+          Cotización estimada:
+          <span id="estimatedPrice" class="text-sm text-[#888DB5]"></span>
+        </h3>
+      </form>
+
+      <!-- ------------ Chart ------------ -->
+      <article
+        class="relative bg-[#4D5593]/[.5] rounded py-6 px-8 w-10/12 md:w-8/12 mt-12 backdrop-blur backdrop-filter border border-[#4D5593]"
+      >
+        <div class="w-full flex justify-between">
+          <!-- Title -->
+          <h2 class="mb-2 text-[#38D4B8] tracking-widest">GRÁFICA</h2>
+
+          <!-- Date Input -->
+          <div class="relative">
+            <input
+              class="text-sm font-medium rounded-full p-2 mb-4"
+              type="date"
+              id="inpDate"
+            />
+            <img
+              class="absolute right-2 top-2 pointer-events-none"
+              src="./imgs/calendar.svg"
+            />
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <canvas id="convertChart"></canvas>
+        <h3 id="chartDescription" class="mt-4 text-sm text-[#888DB5]"></h3>
+
+        <!-- Error -->
+        <div
+          id="error"
+          class="hidden top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute bg-red-400/[.6] border border-red-600 rounded text-center p-2"
+        >
+          No se pueden seleccionar fechas futuras
+        </div>
+
+      </article>
+    </section>
+    <footer
+      class="h-20 bg-white w-full flex justify-center items-center flex-col"
+    >
+      <a href="#"
+        ><img src="./imgs/logo-inverted.svg" class="w-10 h-10 mb-2"
+      /></a>
+      <h4 class="text-[#232B6B] text-sm">Sofía Rey, 273615</h4>
+    </footer>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,43 @@
+body {
+  background: linear-gradient(
+    70deg,
+    rgb(33, 40, 99) 40%,
+    rgb(33, 70, 99) 70%,
+    rgb(35, 107, 99) 100%
+  );
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Nunito", sans-serif;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(
+    70deg,
+    rgb(49 61 164) 40%,
+    rgb(49, 105, 164) 70%,
+    rgb(42 192 175) 100%
+  );
+}
+
+select:focus,
+input:focus {
+  outline: none;
+}
+
+input[type="date"] {
+  background: linear-gradient(
+    70deg,
+    rgb(49 61 164) 40%,
+    rgb(49, 105, 164) 70%,
+    rgb(42 192 175) 100%
+  );
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: opacity(0);
+}
